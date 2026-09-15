@@ -1,0 +1,429 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+header {
+  background-color: #0f172a;
+  color: white;
+  padding: 20px 40px;
+}
+
+nav a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 60px 40px;
+  background: white;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero-slider .slide {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.hero-slider .slide.active {
+  opacity: 1;
+}
+
+.hero-slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 48px;
+  height: 48px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+
+  font-size: 28px;
+  cursor: pointer;
+
+  z-index: 10;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.hero-slider button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+
+  
+.overlay-logo {
+  position: static;
+  width: 250px;
+  margin-bottom: -220px;  
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.8s;
+  opacity: 0
+
+}
+
+
+.hero-content {
+  position: absolute;
+
+  top: 35%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 30;
+
+  text-align: center;
+
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.9);
+  width: 80%;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.hero-content nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hero-content nav a {
+  color: white;
+  text-decoration: none;
+
+  padding: 10px 18px;
+
+  background: rgba(0,0,0,0.4);
+
+  border-radius: 999px;
+
+  transition: 0.3s;
+}
+
+.hero-content nav a:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;   /* limita l’amplada total */
+  margin: 0 auto;      /* centra el bloc */
+  padding: 0 20px;     /* marge lateral en pantalles petites */
+
+}
+
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.card {
+  display: block;
+  text-decoration: none;
+  color: black;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* o 4 / 3 si les vols més quadrades */
+  object-fit: cover;
+}
+
+
+.card h3 {
+  margin: 15px;
+}
+
+.card p {
+  margin: 0 15px 15px;
+}
+
+main {
+  margin-top: 0px;
+}
+
+.kpi-container {
+  max-width: 1200px;
+  margin: -40px auto 10px auto; /* 👈 AQUEST ÉS EL TRUC */
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.kpi-container iframe {
+  width: 100%;
+  height: 170px;
+  border: none;
+  border-radius: 12px;
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  .kpi-container {
+    margin: -40px auto 30px;
+  }
+}
+
+.infogram-embed {
+  min-height: 300px;
+}
+
+.about {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+   text-align: center;
+}
+
+.about h2 {
+  font-size: 28px;   /* lleugerament més gran */
+  margin-bottom: 20px;
+ }
+
+.about p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 0.95;
+    transform: translateY(0);
+  }
+}
+
+.contact {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.contact .email a {
+  font-weight: bold;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.contact .email a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #0f172a;   /* mateix to que header */
+  color: white;
+  margin-top: 60px;
+  border-top: 4px solid #1e293b;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.footer-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-contact a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.footer p,
+.footer a {
+  color: #ffffff;
+}
+
+.footer-logo {
+  width: auto;
+  max-height: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;   /* espai entre logos */
+  margin-bottom: 20px;
+}
+
+.links {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.links h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.links-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.link-card {
+  display: block;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.2s;
+  border-left: 4px solid #0f172a;
+}
+
+.link-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 900px) {
+  .links-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .links-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.viewer {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.viewer iframe {
+  width: 100%;
+  height: 85vh;
+  border: none;
+  display: block;
+  border-radius: 12px;
+  background: white;
+}
+
+/* ocult inicial */
+.hidden {
+  display: none !important;
+}
+
+
+
+
+
