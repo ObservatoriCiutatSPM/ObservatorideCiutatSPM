@@ -51,38 +51,40 @@ cards.forEach(card => {
   });
 });
 
-// --- CONSENTIMENT DE COOKIES ---
+// --- CONSENTIMENT I GOOGLE ANALYTICS ---
+
+// Preparem Google Consent Mode abans de carregar Google Analytics
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+  window.dataLayer.push(arguments);
+}
+
+window.gtag = gtag;
+
+// Per defecte: sense consentiment
+gtag("consent", "default", {
+  analytics_storage: "denied",
+  ad_storage: "denied",
+  ad_user_data: "denied",
+  ad_personalization: "denied",
+  wait_for_update: 500
+});
 
 const cookieBanner = document.getElementById("cookie-banner");
 const cookieAccept = document.getElementById("cookie-accept");
 const cookieReject = document.getElementById("cookie-reject");
 
-cookieAccept.addEventListener("click", () => {
-  localStorage.setItem("cookieConsent", "accepted");
-  cookieBanner.style.display = "none";
+let googleAnalyticsLoaded = false;
 
-  carregarGoogleAnalytics();
-});
 
-cookieReject.addEventListener("click", () => {
-  localStorage.setItem("cookieConsent", "rejected");
-  cookieBanner.style.display = "none";
-});
-
-const cookieConsent = localStorage.getItem("cookieConsent");
-
-if (cookieConsent === "accepted") {
-  cookieBanner.style.display = "none";
-  carregarGoogleAnalytics();
-}
-
-if (cookieConsent === "rejected") {
-  cookieBanner.style.display = "none";
-}
-
-// --- GOOGLE ANALYTICS ---
+// --- CARREGAR GOOGLE ANALYTICS ---
 
 function carregarGoogleAnalytics() {
+
+  if (googleAnalyticsLoaded) return;
+
+  googleAnalyticsLoaded = true;
 
   const script = document.createElement("script");
 
@@ -91,14 +93,65 @@ function carregarGoogleAnalytics() {
 
   document.head.appendChild(script);
 
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-
-  window.gtag = gtag;
-
   gtag("js", new Date());
   gtag("config", "G-0EEJSHDC0L");
+}
+
+
+// --- ACCEPTAR COOKIES ---
+
+function acceptarCookies() {
+
+  localStorage.setItem("cookieConsent", "accepted");
+
+  cookieBanner.style.display = "none";
+
+  gtag("consent", "update", {
+    analytics_storage: "granted",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied"
+  });
+
+  carregarGoogleAnalytics();
+}
+
+
+// --- REBUTJAR COOKIES ---
+
+function rebutjarCookies() {
+
+  localStorage.setItem("cookieConsent", "rejected");
+
+  cookieBanner.style.display = "none";
+}
+
+
+// --- BOTONS ---
+
+cookieAccept.addEventListener("click", acceptarCookies);
+cookieReject.addEventListener("click", rebutjarCookies);
+
+
+// --- CONSENTIMENT GUARDAT ---
+
+const cookieConsent = localStorage.getItem("cookieConsent");
+
+if (cookieConsent === "accepted") {
+
+  cookieBanner.style.display = "none";
+
+  gtag("consent", "update", {
+    analytics_storage: "granted",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied"
+  });
+
+  carregarGoogleAnalytics();
+}
+
+if (cookieConsent === "rejected") {
+
+  cookieBanner.style.display = "none";
 }
