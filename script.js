@@ -51,3 +51,54 @@ cards.forEach(card => {
   });
 });
 
+// --- CONSENTIMENT DE COOKIES ---
+
+const cookieBanner = document.getElementById("cookie-banner");
+const cookieAccept = document.getElementById("cookie-accept");
+const cookieReject = document.getElementById("cookie-reject");
+
+cookieAccept.addEventListener("click", () => {
+  localStorage.setItem("cookieConsent", "accepted");
+  cookieBanner.style.display = "none";
+
+  carregarGoogleAnalytics();
+});
+
+cookieReject.addEventListener("click", () => {
+  localStorage.setItem("cookieConsent", "rejected");
+  cookieBanner.style.display = "none";
+});
+
+const cookieConsent = localStorage.getItem("cookieConsent");
+
+if (cookieConsent === "accepted") {
+  cookieBanner.style.display = "none";
+  carregarGoogleAnalytics();
+}
+
+if (cookieConsent === "rejected") {
+  cookieBanner.style.display = "none";
+}
+
+// --- GOOGLE ANALYTICS ---
+
+function carregarGoogleAnalytics() {
+
+  const script = document.createElement("script");
+
+  script.async = true;
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-0EEJSHDC0L";
+
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  window.gtag = gtag;
+
+  gtag("js", new Date());
+  gtag("config", "G-0EEJSHDC0L");
+}

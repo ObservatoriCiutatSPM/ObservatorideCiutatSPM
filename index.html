@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ca">
 
 <head>
@@ -13,108 +14,180 @@
 
 <body>
 
-<div class="hero-slider">
-  <img src="images/3_1.png" class="slide active">
-  <img src="images/1_1.png" class="slide">
-  <img src="images/2_2.png" class="slide">
-  
-  
-  <div class="hero-content">
-    
-<h1>OBSERVATORI DE CIUTAT</h1>
+  <div class="hero-slider">
 
-<p>Dades i indicadors per analitzar la realitat social i econòmica de Santa Perpètua de Mogoda</p> 
+```
+<img src="images/70-020_116.jpg" class="slide active" alt="Santa Perpètua de Mogoda">
+<img src="images/70-020_204.jpg" class="slide" alt="Santa Perpètua de Mogoda">
+<img src="images/70-020_014.jpg" class="slide" alt="Santa Perpètua de Mogoda">
+<img src="images/70-020_041.jpg" class="slide" alt="Santa Perpètua de Mogoda">
 
-<img src="images/LOGO OBSERVATORI_blanc.png"class="overlay-logo">
+<div class="hero-content">
+
+  <h1>OBSERVATORI DE CIUTAT</h1>
+
+  <p>
+    Dades i indicadors per analitzar la realitat social i econòmica de Santa Perpètua de Mogoda
+  </p>
+
+  <img
+    src="images/LOGO OBSERVATORI_blanc.png"
+    class="overlay-logo"
+    alt="Observatori de Ciutat"
+  >
+
+</div>
+
+<button type="button" class="prev">‹</button>
+<button type="button" class="next">›</button>
+```
 
   </div>
 
-  <button class="prev">‹</button>
-  <button class="next">›</button>
-  
-</div>
-  
+  <main>
+
+```
+<!-- KPI -->
+
 <div class="kpi-container">
 
-  <iframe 
+  <iframe
     src="https://e.infogram.com/b47e31aa-c8c3-4f5a-818a-a069e914be9d?src=embed"
-    title="KPI"
+    title="Indicadors de l'Observatori de Ciutat"
     width="100%"
-    scrolling="no"
-    frameborder="0">
+    scrolling="no">
   </iframe>
 
 </div>
 
-  <main>
 
-        <section class="cards">
+<!-- PUBLICACIONS DESTACADES -->
 
-      
-<a class="card" 
-   data-src="https://app.powerbi.com/view?r=eyJrIjoiZTBkNTMxMWEtNTYzOC00NjA4LWFiMjMtMTQxM2UyMjkzNTZhIiwidCI6ImIxMWFkNmQwLTYzMmItNGU1OC05ZTU4LTZkMTU4N2ZiMjE4ZiIsImMiOjl9">
-<img src="images/Demografia.png" alt="Demografia">
-  <h3>Demografia</h3>
-  <p>Estructura i evolució de la població.</p>
-</a>
+<section class="featured-publications">
 
-<a class="card" 
-   data-src="https://app.powerbi.com/view?r=eyJrIjoiOGY5YzYzMTktZGEzNy00NjVkLTg1YTMtMjIzNTY3ZWEzMTcyIiwidCI6ImIxMWFkNmQwLTYzMmItNGU1OC05ZTU4LTZkMTU4N2ZiMjE4ZiIsImMiOjl9">
-<img src="images/Mercat laboral.png" alt="Mercat laboral">
-  <h3>Mercat laboral</h3>
-  <p>Evolució de l'atur i la contractació.</p>
-</a>
+  <h2>Publicacions destacades</h2>
 
-<a class="card" 
-   data-src="https://app.powerbi.com/view?r=eyJrIjoiNmI4YjdkOWEtZDRhMi00MTU4LTk1ZDEtNjRmNzA5OTJlYjNhIiwidCI6ImIxMWFkNmQwLTYzMmItNGU1OC05ZTU4LTZkMTU4N2ZiMjE4ZiIsImMiOjl9">
-<img src="images/Activitat empresarial.png" alt="Activitat empresarial">
-          <h3>Activitat empresarial</h3>
-        <p>Teixit empresarial i creació d'empreses.</p>
-      </a>
+  <div class="featured-container">
 
-<a class="card" 
-   data-src="https://app.powerbi.com/view?r=eyJrIjoiZTA4NTIwMmEtMGU3My00OTUxLWI1M2MtNGU1ZTcxZTViZTM1IiwidCI6ImIxMWFkNmQwLTYzMmItNGU1OC05ZTU4LTZkMTU4N2ZiMjE4ZiIsImMiOjl9">
-<img src="images/Educació.png" alt="Educació">
+    <a
+      href="https://santaperpetuademogoda.webmunicipal.diba.cat/media/repository/ObservatoriCiutat/Atur_i_contractacio_Darrer_informe.pdf"
+      class="featured-card"
+    >
+      <span class="featured-tag">Actualització mensual</span>
+      <h3>Mercat laboral</h3>
+      <p>Evolució de l'atur i la contractació.</p>
+    </a>
+
+    <a
+      href="https://santaperpetuademogoda.webmunicipal.diba.cat/media/repository/ObservatoriCiutat/Resultats_avaluacio_ESO-BATX.pdf"
+      class="featured-card"
+    >
+      <span class="featured-tag">Informe temàtic</span>
+      <h3>Resultats d'avaluació de l'ESO i Batxillerat (Curs 2024/25)</h3>
+      <p>Anàlisi dels resultats acadèmics i la seva evolució.</p>
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ÀMBITS TEMÀTICS -->
+
+<section class="dashboards">
+
+  <h2 class="section-title">Àmbits temàtics</h2>
+
+  <section class="cards">
+
+    <a
+      class="card"
+      data-src="https://app.powerbi.com/view?r=eyJrIjoiZTBkNTMxMWEtNTYzOC00NjA4LWFiMjMtMTQxM2UyMjkzNTZhIiwidCI6ImIxMWFkNmQwLTYzMmItNGU1OC05ZTU4LTZkMTU4N2ZiMjE4ZiIsImMiOjl9"
+    >
+      <img src="images/Demografia.png" alt="Demografia">
+      <h3>Demografia</h3>
+      <p>Estructura i evolució de la població.</p>
+    </a>
+
+    <a
+      class="card"
+      data-src="https://app.powerbi.com/view?r=eyJrIjoiOGY5YzYzMTktZGEzNy00NjVkLTg1YTMtMjIzNTY3ZWEzMTcyIiwidCI6ImIxMWFkNmQwLTYzMmItNGU1OC05ZTU4LTZkMTU4N2ZiMjE4ZiIsImMiOjl9"
+    >
+      <img src="images/Mercat laboral.png" alt="Mercat laboral">
+      <h3>Mercat laboral</h3>
+      <p>Evolució de l'atur i la contractació.</p>
+    </a>
+
+    <a
+      class="card"
+      data-src="https://app.powerbi.com/view?r=eyJrIjoiNmI4YjdkOWEtZDRhMi00MTU4LTk1ZDEtNjRmNzA5OTJlYjNhIiwidCI6ImIxMWFkNmQwLTYzMmItNGU1OC05ZTU4LTZkMTU4N2ZiMjE4ZiIsImMiOjl9"
+    >
+      <img src="images/Activitat empresarial.png" alt="Activitat empresarial">
+      <h3>Activitat empresarial</h3>
+      <p>Teixit empresarial i creació d'empreses.</p>
+    </a>
+
+    <a
+      class="card"
+      data-src="https://app.powerbi.com/view?r=eyJrIjoiZTA4NTIwMmEtMGU3My00OTUxLWI1M2MtNGU1ZTcxZTViZTM1IiwidCI6ImIxMWFkNmQwLTYzMmItNGU1OC05ZTU4LTZkMTU4N2ZiMjE4ZiIsImMiOjl9"
+    >
+      <img src="images/Educació.png" alt="Educació">
       <h3>Educació</h3>
-        <p>Centres educatius, alumnes matriculats, mobilitat i avaluació.</p>
-      </a>
+      <p>Centres educatius, alumnes matriculats, mobilitat i avaluació.</p>
+    </a>
 
-      <a class="card" 
-   data-src="https://app.powerbi.com/view?r=eyJrIjoiYjhjOTcwOWMtZTc0OS00ZGVhLWEyMzAtYjZlMmM4YzIxMzNhIiwidCI6ImIxMWFkNmQwLTYzMmItNGU1OC05ZTU4LTZkMTU4N2ZiMjE4ZiIsImMiOjl9">
-<img src="images/Mobilitat.png" alt="Mobilitat">
-            <h3>Mobilitat</h3>
-        <p>Parc de vehicles i serveis relacionats.</p>
-      </a>
+    <a
+      class="card"
+      data-src="https://app.powerbi.com/view?r=eyJrIjoiYjhjOTcwOWMtZTc0OS00ZGVhLWEyMzAtYjZlMmM4YzIxMzNhIiwidCI6ImIxMWFkNmQwLTYzMmItNGU1OC05ZTU4LTZkMTU4N2ZiMjE4ZiIsImMiOjl9"
+    >
+      <img src="images/Mobilitat.png" alt="Mobilitat">
+      <h3>Mobilitat</h3>
+      <p>Parc de vehicles i serveis relacionats.</p>
+    </a>
 
-      <a class="card" 
-   data-src="https://app.powerbi.com/view?r=eyJrIjoiOTQ1NmQyOTctMWIwYi00MDJiLThjZDAtOTQwYWY3NzA2MzYxIiwidCI6ImIxMWFkNmQwLTYzMmItNGU1OC05ZTU4LTZkMTU4N2ZiMjE4ZiIsImMiOjl9">
-<img src="images/Habitatge.jpg" alt="Habitatge">
-               <h3>Habitatge</h3>
-        <p>Parc d'habitatges, mercat immobiliari i construcció.</p>
-      </a>
+    <a
+      class="card"
+      data-src="https://app.powerbi.com/view?r=eyJrIjoiOTQ1NmQyOTctMWIwYi00MDJiLThjZDAtOTQwYWY3NzA2MzYxIiwidCI6ImIxMWFkNmQwLTYzMmItNGU1OC05ZTU4LTZkMTU4N2ZiMjE4ZiIsImMiOjl9"
+    >
+      <img src="images/Habitatge.png" alt="Habitatge">
+      <h3>Habitatge</h3>
+      <p>Parc d'habitatges, mercat immobiliari i construcció.</p>
+    </a>
 
-      <a class="card" 
-   data-src="https://app.powerbi.com/view?r=eyJrIjoiYWNlZTFiYmUtOTMwMC00NTczLTk5M2YtYjI3ZDkxODE4MGExIiwidCI6ImIxMWFkNmQwLTYzMmItNGU1OC05ZTU4LTZkMTU4N2ZiMjE4ZiIsImMiOjl9">
-<img src="images/Economia.png" alt="Economia">
-               <h3>Economia</h3>
-        <p>Context macroeconòmic, renda, distribució i desigualtat.</p>
-      </a>
+    <a
+      class="card"
+      data-src="https://app.powerbi.com/view?r=eyJrIjoiYWNlZTFiYmUtOTMwMC00NTczLTk5M2YtYjI3ZDkxODE4MGExIiwidCI6ImIxMWFkNmQwLTYzMmItNGU1OC05ZTU4LTZkMTU4N2ZiMjE4ZiIsImMiOjl9"
+    >
+      <img src="images/Economia.png" alt="Economia">
+      <h3>Economia</h3>
+      <p>Context macroeconòmic, renda, distribució i desigualtat.</p>
+    </a>
 
-      <a class="card" 
-   data-src="https://app.powerbi.com/view?r=eyJrIjoiN2Q3MmU0YzktODVmMi00ZWZkLWIwNTItMWYyNzA3MTIxNjI4IiwidCI6ImIxMWFkNmQwLTYzMmItNGU1OC05ZTU4LTZkMTU4N2ZiMjE4ZiIsImMiOjl9">
-<img src="images/Consum.png" alt="Consum">
-        <h3>Consum</h3>
-        <p>Consum d'aigua, energia i altres recursos.</p>
-      </a>
+    <a
+      class="card"
+      data-src="https://app.powerbi.com/view?r=eyJrIjoiN2Q3MmU0YzktODVmMi00ZWZkLWIwNTItMWYyNzA3MTIxNjI4IiwidCI6ImIxMWFkNmQwLTYzMmItNGU1OC05ZTU4LTZkMTU4N2ZiMjE4ZiIsImMiOjl9"
+    >
+      <img src="images/Consum.png" alt="Consum">
+      <h3>Consum</h3>
+      <p>Consum d'aigua, energia i altres recursos.</p>
+    </a>
 
-    </section>
+  </section>
+
+</section>
+
+
+<!-- VISOR POWER BI -->
 
 <div id="dashboard-viewer" class="viewer hidden">
-   <iframe id="dashboard-frame"></iframe>
+  <iframe id="dashboard-frame" title="Panell de dades"></iframe>
 </div>
 
 
-    <section class="about">
+<!-- SOBRE L'OBSERVATORI -->
+
+<section class="about">
+
   <h2>Sobre l'Observatori</h2>
 
   <p>
@@ -126,12 +199,13 @@
   </p>
 
   <p>
-    L'Observatori s'estructura en vuit àmbits temàtics: demografia, mercat laboral, activitat empresarial, mobilitat, habitatge i educació, economia i consum, que es despleguen mitjançant panells interactius de visualització de dades. Progressivament, es preveu la incorporació de nous àmbits i indicadors.
+    L'Observatori s'estructura en vuit àmbits temàtics: demografia, mercat laboral, activitat empresarial, mobilitat, habitatge i educació, economia i consum, que es despleguen mitjançant panells interactius de visualització de dades. La informació que s'hi presenta prové de fonts oficials i de fonts municipals, i s'actualitza periòdicament per garantir-ne la qualitat i la vigència.
   </p>
 
-  <p>
-    La informació que s'hi presenta prové de fonts oficials i de fonts municipals, i s'actualitza periòdicament per garantir-ne la qualitat i la vigència.
-  </p>
+  </section>
+
+
+<!-- TAMBÉ ET POT INTERESSAR -->
 
 <section class="links">
 
@@ -139,23 +213,77 @@
 
   <div class="links-container">
 
-    <a href="https://www.rieradecaldes.com/observatori.html" target="_blank" class="link-card">Observatori de l'Eix de la Riera de Caldes</a>
+    <a
+      href="https://www.rieradecaldes.com/observatori.html"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="link-card"
+    >
+      Observatori de l'Eix de la Riera de Caldes
+    </a>
 
-    <a href="https://plans-staperpetua.diba.cat/planes/pla-de-mandat/2025/" target="_blank" class="link-card">Pla d'Actuació Municipal (2023-2027)</a>
+    <a
+      href="https://plans-staperpetua.diba.cat/planes/pla-de-mandat/2025/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="link-card"
+    >
+      Pla d'Actuació Municipal (2023-2027)
+    </a>
 
-    <a href="https://www.staperpetua.cat/ajuntament/rendiment-de-comptes-" target="_blank" class="link-card">Rendiment de Comptes</a>
+    <a
+      href="https://www.staperpetua.cat/ajuntament/rendiment-de-comptes-"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="link-card"
+    >
+      Rendiment de Comptes
+    </a>
 
-    <a href="https://seu-e.cat/ca/web/santaperpetuademogoda/dades-obertes/-/dadesobertes/showConjuntsDadesByTag?p_auth=3R50V7o5" target="_blank" class="link-card">Dades Obertes</a>
+    <a
+      href="https://seu-e.cat/ca/web/santaperpetuademogoda/dades-obertes/-/dadesobertes/showConjuntsDadesByTag?p_auth=3R50V7o5"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="link-card"
+    >
+      Dades Obertes
+    </a>
 
-    <a href="https://piu.staperpetua.cat/geoportal/?center=431042.0,4598619.7&scale=30000&thematic=tematic1" target="_blank" class="link-card">Punt d'Informació Urbanística</a>
+    <a
+      href="https://piu.staperpetua.cat/geoportal/?center=431042.0,4598619.7&scale=30000&thematic=tematic1"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="link-card"
+    >
+      Punt d'Informació Urbanística
+    </a>
 
-    <a href="https://www.staperpetua.cat/ajuntament/participacio-ciutadana" target="_blank" class="link-card">Santa Perpètua Participa</a>
+    <a
+      href="https://www.staperpetua.cat/ajuntament/participacio-ciutadana"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="link-card"
+    >
+      Santa Perpètua Participa
+    </a>
 
-    <a href="https://dibarometre.diba.cat/#/barcelona/40/8260" target="_blank" class="link-card">Dibaròmetre</a>
-    
+    <a
+      href="https://dibarometre.diba.cat/#/barcelona/40/8260"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="link-card"
+    >
+      Dibaròmetre
+    </a>
+
   </div>
-  
-  <section class="contact">
+
+</section>
+
+
+<!-- CONTACTE -->
+
+<section class="contact">
 
   <h2>Contacte</h2>
 
@@ -168,23 +296,38 @@
   </p>
 
 </section>
-  
+
+
+<!-- FOOTER -->
 
 <footer class="footer">
 
   <div class="footer-content">
-<div class="footer-logos">
-  <img src="images/LOGO OBSERVATORI_blanc.png" class="footer-logo">
-  <img src="images/logo-ajuntament.png" class="footer-logo">
-</div>
+
+    <div class="footer-logos">
+
+      <img
+        src="images/LOGO OBSERVATORI_blanc.png"
+        class="footer-logo"
+        alt="Observatori de Ciutat"
+      >
+
+      <img
+        src="images/logo-ajuntament.png"
+        class="footer-logo"
+        alt="Ajuntament de Santa Perpètua de Mogoda"
+      >
+
+    </div>
 
     <p class="footer-title">Observatori de Ciutat</p>
-    
 
     <p>Ajuntament de Santa Perpètua de Mogoda</p>
 
-    <p>Servei de Govern Obert, Transparència i Atenció Ciutadana</p>
-  
+    <p>
+      Servei de Govern Obert, Transparència i Atenció Ciutadana
+    </p>
+
     <p class="footer-copy">
       © 2026 Ajuntament de Santa Perpètua de Mogoda
     </p>
@@ -194,11 +337,42 @@
 </footer>
 
 
+<!-- BANNER DE CONSENTIMENT DE COOKIES -->
+
+<div id="cookie-banner" class="cookie-banner">
+
+  <div class="cookie-content">
+
+    <div class="cookie-text">
+      <h2>Privacitat i cookies</h2>
+
+      <p>
+        Utilitzem cookies i tecnologies similars per analitzar l'ús
+        d'aquest lloc web i millorar-ne el funcionament.
+        Pots acceptar-les o rebutjar-les.
+      </p>
+    </div>
+
+    <div class="cookie-buttons">
+      <button type="button" id="cookie-reject">
+        Rebutjar
+      </button>
+
+      <button type="button" id="cookie-accept">
+        Acceptar
+      </button>
+    </div>
+
+  </div>
+
+</div>
+
   </main>
 
   <script src="script.js"></script>
+
   <script src="https://e.infogram.com/js/dist/embed.js"></script>
 
-
 </body>
+
 </html>
