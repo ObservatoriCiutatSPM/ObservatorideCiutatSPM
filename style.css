@@ -258,6 +258,8 @@ nav a {
    ========================================================= */
 
 .about {
+  width: calc(100% - 40px);
+  box-sizing: border-box;
   max-width: 1200px;
   margin: 60px auto;
   padding: 0 20px 10px;
@@ -615,6 +617,31 @@ nav a {
 
 }
 
+/* HERO - MÒBIL */
+
+@media (max-width: 700px) {
+
+  .hero-content {
+    width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+}
+
+/* CONTACTE - MÒBIL */
+
+@media (max-width: 700px) {
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+}
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */
@@ -866,3 +893,26 @@ nav a {
   height: 100%;
   border: none;
 }
+
+/* KPI - VERSIÓ DESKTOP / MÒBIL */
+
+.kpi-mobile {
+  display: none;
+}
+
+@media (max-width: 700px) {
+
+  .kpi-desktop {
+    display: none;
+  }
+
+  .kpi-mobile {
+    display: block;
+  }
+
+   .kpi-mobile iframe {
+    height: 85px;
+  }
+
+}
+
