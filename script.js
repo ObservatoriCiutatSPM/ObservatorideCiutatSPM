@@ -155,3 +155,64 @@ if (cookieConsent === "rejected") {
 
   cookieBanner.style.display = "none";
 }
+
+// --- MODAL AVÍS LEGAL ---
+
+const legalLinks = document.querySelectorAll(".legal-link");
+const legalModal = document.getElementById("legal-modal");
+const legalModalClose = document.querySelector(".legal-modal-close");
+const legalModalOverlay = document.querySelector(".legal-modal-overlay");
+
+function obrirLegal() {
+  legalModal.classList.add("active");
+  legalModal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function tancarLegal() {
+  legalModal.classList.remove("active");
+  legalModal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+document.querySelector(".footer-legal").addEventListener("click", (e) => {
+
+  const link = e.target.closest(".legal-link");
+
+  if (!link) return;
+
+  e.preventDefault();
+
+  document.getElementById("legal-modal-frame").src = link.getAttribute("href");
+
+  obrirLegal();
+
+});
+
+const privacyLink = document.querySelector(".privacy-link");
+
+privacyLink.addEventListener("click", (e) => {
+
+  e.preventDefault();
+
+  document.getElementById("legal-modal-frame").src = "privacitat.html";
+
+  obrirLegal();
+
+});
+
+const cookiesLink = document.querySelector(".cookies-link");
+
+cookiesLink.addEventListener("click", (e) => {
+
+  e.preventDefault();
+
+  document.getElementById("legal-modal-frame").src = "cookies.html";
+
+  obrirLegal();
+
+});
+
+legalModalClose.addEventListener("click", tancarLegal);
+
+legalModalOverlay.addEventListener("click", tancarLegal);

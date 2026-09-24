@@ -16,7 +16,7 @@
 
   <div class="hero-slider">
 
-```
+
 <img src="images/70-020_116.jpg" class="slide active" alt="Santa Perpètua de Mogoda">
 <img src="images/70-020_204.jpg" class="slide" alt="Santa Perpètua de Mogoda">
 <img src="images/70-020_014.jpg" class="slide" alt="Santa Perpètua de Mogoda">
@@ -40,13 +40,13 @@
 
 <button type="button" class="prev">‹</button>
 <button type="button" class="next">›</button>
-```
+
 
   </div>
 
   <main>
 
-```
+
 <!-- KPI -->
 
 <div class="kpi-container">
@@ -191,7 +191,7 @@
   <h2>Sobre l'Observatori</h2>
 
   <p>
-    L'Observatori de Ciutat és una eina de consulta i anàlisi que posa a disposició de la ciutadania, el teixit econòmic i els agents del territori informació actualitzada sobre la realitat social i econòmica del municipi.
+    L'Observatori de Ciutat és una eina de consulta i anàlisi que posa a disposició de la ciutadania, el teixit econòmic i els agents del territori informació actualitzada sobre la realitat social i econòmica de Santa Perpètua de Mogoda.
   </p>
 
   <p>
@@ -284,16 +284,50 @@
 <!-- CONTACTE -->
 
 <section class="contact">
+  
+  <div class="contact-container">
 
-  <h2>Contacte</h2>
+    <!-- BLOC CONTACTE -->
 
-  <p>Per a més informació, podeu adreçar la vostra consulta a:</p>
+    <div class="contact-block">
 
-  <p class="email">
-    <a href="mailto:observatorideciutat@staperpetua.cat">
-      observatorideciutat@staperpetua.cat
-    </a>
-  </p>
+      <h3>Contacta amb nosaltres</h3>
+
+      <p>
+        Tens alguna consulta sobre les dades de l’Observatori?
+      </p>
+
+      <p>
+  <a
+    href="mailto:observatorideciutat@staperpetua.cat"
+    class="subscription-button"
+  >
+    Contacte
+  </a>
+</p>
+
+    </div>
+
+
+    <!-- BLOC SUBSCRIPCIÓ -->
+
+    <div class="contact-block subscription-block">
+
+      <h3>Vols estar al dia?</h3>
+
+      <p>
+        Rep les novetats i actualitzacions de l'Observatori.
+      </p>
+
+      <p>
+        <a href="#" class="subscription-button">
+          Subscriu-te
+        </a>
+      </p>
+
+    </div>
+
+  </div>
 
 </section>
 
@@ -302,37 +336,57 @@
 
 <footer class="footer">
 
-  <div class="footer-content">
+<div class="footer-content">
 
-    <div class="footer-logos">
+<div class="footer-info">
 
-      <img
-        src="images/LOGO OBSERVATORI_blanc.png"
-        class="footer-logo"
-        alt="Observatori de Ciutat"
-      >
+  <p>
+    Servei de Govern Obert, Transparència i Atenció Ciutadana
+  </p>
 
-      <img
-        src="images/logo-ajuntament.png"
-        class="footer-logo"
-        alt="Ajuntament de Santa Perpètua de Mogoda"
-      >
+  <p class="footer-city">
+    Ajuntament de Santa Perpètua de Mogoda
+  </p>
 
-    </div>
+  <p class="footer-copy">
+    © 2026
+  </p>
 
-    <p class="footer-title">Observatori de Ciutat</p>
+</div>
 
-    <p>Ajuntament de Santa Perpètua de Mogoda</p>
 
-    <p>
-      Servei de Govern Obert, Transparència i Atenció Ciutadana
-    </p>
+<div class="footer-logos">
 
-    <p class="footer-copy">
-      © 2026 Ajuntament de Santa Perpètua de Mogoda
-    </p>
+  <img
+    src="images/LOGO OBSERVATORI_blanc.png"
+    class="footer-logo"
+    alt="Observatori de Ciutat"
+  >
 
-  </div>
+  <a
+    href="https://www.staperpetua.cat/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src="images/logo-ajuntament.png"
+      class="footer-logo"
+      alt="Ajuntament de Santa Perpètua de Mogoda"
+    >
+  </a>
+
+</div>
+  
+
+  <nav class="footer-legal" aria-label="Informació legal">
+
+    <a href="avis-legal.html" class="legal-link">Avís legal</a>
+    <a href="privacitat.html" class="privacy-link">Política de privacitat</a>
+    <a href="cookies.html" class="cookies-link">Política de cookies</a>
+
+  </nav>
+
+</div>
 
 </footer>
 
@@ -362,6 +416,32 @@
         Acceptar
       </button>
     </div>
+
+  </div>
+
+</div>
+
+<!-- MODAL AVÍS LEGAL -->
+
+<div id="legal-modal" class="legal-modal" aria-hidden="true">
+
+  <div class="legal-modal-overlay"></div>
+
+  <div class="legal-modal-content" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title">
+
+    <button
+      type="button"
+      class="legal-modal-close"
+      aria-label="Tancar"
+    >
+      ×
+    </button>
+
+    <iframe
+      src="avis-legal.html"
+      id="legal-modal-frame"
+      title="Avís legal"
+    ></iframe>
 
   </div>
 
