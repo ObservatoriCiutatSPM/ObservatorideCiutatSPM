@@ -1,4 +1,5 @@
 // --- HERO SLIDER ---
+
 const images = document.querySelectorAll('.hero-slider .slide');
 const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
@@ -31,30 +32,72 @@ prevBtn.addEventListener('click', () => {
 
 
 // --- POWER BI VIEWER ---
+
 const cards = document.querySelectorAll(".card");
 const viewer = document.getElementById("dashboard-viewer");
 const frame = document.getElementById("dashboard-frame");
 
+const rotateMessage = document.getElementById("rotate-message");
+
+function esMobil() {
+  return window.matchMedia("(max-width: 1000px)").matches;
+}
+
+function esVertical() {
+  return window.matchMedia("(orientation: portrait)").matches;
+}
+
+function actualitzarOrientacio() {
+
+  if (!viewer.classList.contains("hidden")) {
+
+    if (esMobil() && esVertical()) {
+
+      frame.style.display = "none";
+      rotateMessage.style.display = "flex";
+
+    } else {
+
+      frame.style.display = "block";
+      rotateMessage.style.display = "none";
+
+    }
+
+  }
+}
+
+
 cards.forEach(card => {
+
   card.addEventListener("click", (e) => {
 
-    e.preventDefault(); // 👈 important
+    e.preventDefault();
 
     const url = card.getAttribute("data-src");
 
     frame.src = url;
-viewer.classList.remove("hidden");
 
-  });
-});
+    viewer.classList.remove("hidden");
 
-// --- CONTROL DE L'ORIENTACIÓ DEL DASHBOARD ---
+    if (esMobil() && esVertical()) {
 
-window.addEventListener("orientationchange", () => {
+      /*
+       * En mòbil vertical no fem scroll.
+       * El missatge ocupa la pantalla i demana girar el dispositiu.
+       */
 
-  setTimeout(() => {
+      frame.style.display = "none";
+      rotateMessage.style.display = "flex";
 
-    if (window.matchMedia("(orientation: landscape)").matches) {
+    } else {
+
+      /*
+       * En escriptori i en horitzontal,
+       * mostrem el Power BI i portem l'usuari fins al panell.
+       */
+
+      frame.style.display = "block";
+      rotateMessage.style.display = "none";
 
       viewer.scrollIntoView({
         behavior: "smooth",
@@ -63,14 +106,55 @@ window.addEventListener("orientationchange", () => {
 
     }
 
-  }, 300);
+  });
+
+});
+
+
+// --- CANVI D'ORIENTACIÓ ---
+
+window.addEventListener("orientationchange", () => {
+
+  setTimeout(() => {
+
+    if (viewer.classList.contains("hidden")) {
+      return;
+    }
+
+    if (esMobil() && esVertical()) {
+
+      /*
+       * Tornem a vertical:
+       * Power BI desapareix i torna el missatge.
+       */
+
+      frame.style.display = "none";
+      rotateMessage.style.display = "flex";
+
+    } else {
+
+      /*
+       * Passem a horitzontal:
+       * mostrem Power BI i portem l'usuari fins al panell.
+       */
+
+      frame.style.display = "block";
+      rotateMessage.style.display = "none";
+
+      viewer.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+    }
+
+  }, 500);
 
 });
 
 
 // --- CONSENTIMENT I GOOGLE ANALYTICS ---
 
-// Preparem Google Consent Mode abans de carregar Google Analytics
 window.dataLayer = window.dataLayer || [];
 
 function gtag() {
@@ -79,7 +163,6 @@ function gtag() {
 
 window.gtag = gtag;
 
-// Per defecte: sense consentiment
 gtag("consent", "default", {
   analytics_storage: "denied",
   ad_storage: "denied",
@@ -172,6 +255,7 @@ if (cookieConsent === "rejected") {
 
   cookieBanner.style.display = "none";
 }
+
 
 // --- MODAL AVÍS LEGAL ---
 
