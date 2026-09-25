@@ -116,6 +116,7 @@ nav a {
   text-align: center;
   color: #ffffff;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+  pointer-events: none;
 }
 
 .hero-content h1 {
