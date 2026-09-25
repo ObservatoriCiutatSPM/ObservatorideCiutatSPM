@@ -123,20 +123,24 @@ window.addEventListener("orientationchange", () => {
 
     if (esMobil() && esVertical()) {
 
-      /*
-       * Tornem a vertical:
-       * Power BI desapareix i torna el missatge.
-       */
+      // Tornem a vertical:
+      // tanquem el visor i tornem als àmbits
 
-      frame.style.display = "none";
-      rotateMessage.style.display = "flex";
+      viewer.classList.add("hidden");
+
+      frame.src = "";
+      frame.style.display = "block";
+      rotateMessage.style.display = "none";
+
+      document.querySelector(".dashboards").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
 
     } else {
 
-      /*
-       * Passem a horitzontal:
-       * mostrem Power BI i portem l'usuari fins al panell.
-       */
+      // Passem a horitzontal:
+      // mostrem el dashboard
 
       frame.style.display = "block";
       rotateMessage.style.display = "none";
