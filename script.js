@@ -45,13 +45,28 @@ cards.forEach(card => {
     frame.src = url;
 viewer.classList.remove("hidden");
 
-// scroll automàtic
-setTimeout(() => {
-  viewer.scrollIntoView({ behavior: "smooth" });
-}, 300);
-
   });
 });
+
+// --- CONTROL DE L'ORIENTACIÓ DEL DASHBOARD ---
+
+window.addEventListener("orientationchange", () => {
+
+  setTimeout(() => {
+
+    if (window.matchMedia("(orientation: landscape)").matches) {
+
+      viewer.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+    }
+
+  }, 300);
+
+});
+
 
 // --- CONSENTIMENT I GOOGLE ANALYTICS ---
 
