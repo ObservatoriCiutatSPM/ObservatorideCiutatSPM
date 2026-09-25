@@ -502,7 +502,7 @@ nav a {
 
 @media (max-width: 1000px) and (orientation: landscape) {
   .viewer iframe {
-    height: 55vw;
+    height: 60vw;
   }
 }
 

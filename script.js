@@ -43,10 +43,12 @@ cards.forEach(card => {
     const url = card.getAttribute("data-src");
 
     frame.src = url;
-    viewer.classList.remove("hidden");
+viewer.classList.remove("hidden");
 
-    // scroll automàtic
-    viewer.scrollIntoView({ behavior: "smooth" });
+// scroll automàtic
+setTimeout(() => {
+  viewer.scrollIntoView({ behavior: "smooth" });
+}, 300);
 
   });
 });
