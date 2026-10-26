@@ -33,7 +33,7 @@ prevBtn.addEventListener('click', () => {
 
 // --- POWER BI VIEWER ---
 
-const cards = document.querySelectorAll(".card");
+const cards = document.querySelectorAll(".card, .featured-card[data-src], .link-card[data-src]");
 const viewer = document.getElementById("dashboard-viewer");
 const frame = document.getElementById("dashboard-frame");
 
