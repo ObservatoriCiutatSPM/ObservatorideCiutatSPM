@@ -320,6 +320,7 @@ nav a {
   background: #f8fafc;
   border-left: 4px solid #0f172a;
   border-top: 4px solid #0f172a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact-block h3 {
