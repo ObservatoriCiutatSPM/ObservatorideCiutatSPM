@@ -236,21 +236,50 @@ nav a {
   padding: 0 20px;
   position: relative;
   z-index: 10;
-  }
-
-.kpi-container iframe {
-  width: 100%;
-  height: 125px;
-  border: none;
-  border-radius: 12px;
-  display: block;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border-left: 4px solid #0f172a;
-  border-top: 4px solid #0f172a;
 }
 
-.infogram-embed {
-  min-height: 300px;
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 0;
+  padding: 20px 12px;
+  background: white;
+  border-radius: 12px;
+  border-left: 4px solid #0f172a;
+  border-top: 4px solid #0f172a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.kpi-item {
+  min-width: 0;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+.kpi-item dt {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #333;
+}
+
+.kpi-item dd {
+  margin: 8px 0 0;
+  font-size: clamp(22px, 2.6vw, 32px);
+  line-height: 1.2;
+  color: #202456;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 600px) {
+  .kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 0;
+    padding: 16px 8px;
+  }
+
+  .kpi-item:last-child {
+    grid-column: 1 / -1;
+  }
 }
 
 
@@ -999,28 +1028,6 @@ nav a {
   border: none;
 }
 
-/* KPI - VERSIÓ DESKTOP / MÒBIL */
-
-.kpi-mobile {
-  display: none;
-}
-
-@media (max-width: 700px) {
-
-  .kpi-desktop {
-    display: none;
-  }
-
-  .kpi-mobile {
-    display: block;
-  }
-
-   .kpi-mobile iframe {
-    height: 85px;
-  }
-
-}
-
 /* CAPÇALERA I KPI — MÒBIL EN HORITZONTAL */
 
 @media (max-width: 1000px) and (orientation: landscape) {
@@ -1062,8 +1069,5 @@ nav a {
     box-sizing: border-box;
   }
 
-  .kpi-container iframe {
-    box-sizing: border-box;
-  }
 
 }
