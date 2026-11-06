@@ -1021,3 +1021,49 @@ nav a {
 
 }
 
+/* CAPÇALERA I KPI — MÒBIL EN HORITZONTAL */
+
+@media (max-width: 1000px) and (orientation: landscape) {
+
+  .hero-slider {
+    height: auto;
+    min-height: 300px;
+  }
+
+  .hero-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px 65px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    margin: 0 0 10px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0 0 12px;
+  }
+
+  .overlay-logo {
+    width: 110px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .kpi-container {
+    margin: 10px auto 30px;
+    box-sizing: border-box;
+  }
+
+  .kpi-container iframe {
+    box-sizing: border-box;
+  }
+
+}
